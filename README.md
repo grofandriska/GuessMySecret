@@ -26,13 +26,7 @@ A tiny Java console game where the computer picks a secret number and you and yo
 
 You'll need **Java 8 or newer**.
 
-**The lazy way (jar):**
-
-```bash
-java -jar GuessMySecret.jar
-```
-
-**The "I build my own jars, thank you" way**, from the `guess` folder:
+**Build a jar and play**, from the `guess` folder:
 
 ```bash
 mkdir out
@@ -93,8 +87,7 @@ The winner is : Curious Bence! The Secret number was: 17
 guess/
 ├── game/
 │   └── GameLoader.java   # the whole game: brains, rules, and attitude
-├── Manifest.txt          # tells the .jar where the game lives (Main-Class: game.GameLoader)
-└── GuessMySecret.jar     # the ready-to-play version: java -jar GuessMySecret.jar
+└── Manifest.txt          # tells the .jar where the game lives (Main-Class: game.GameLoader)
 ```
 
 ---

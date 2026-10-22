@@ -1,0 +1,10 @@
+# Build output
+out/
+*.class
+*.jar
+
+# IDE / editor
+.idea/
+*.iml
+.vscode/
+*~
