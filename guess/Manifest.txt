@@ -1,1 +1,1 @@
-Main-Class: GameLoader.Main
+Main-Class: game.GameLoader
