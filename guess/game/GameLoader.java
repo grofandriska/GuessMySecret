@@ -106,27 +106,26 @@ public class GameLoader {
 
 
     public void validatePlayerName(String name) {
-        try {
-            if (name != null && name.length() > 0) {
-                for (Player p : playerList) {
-                    if (p.getName().equals(name)) {
-                        System.out.println(name + " name is in use! Choose another name please.");
-                    } else {
-                        System.out.println("player added");
-                        playerList.add(new Player(name));
-                        break;
-                    }
-                }
-                if (playerList.size() < 1) {
-                    playerList.add(new Player(name));
-                }
-            } else {
-                System.out.println("Give a valid player name");
+            if (name == null || name.isEmpty()) {
+                System.out.println("What is your Name, come on!");
+                return;
             }
-        } catch (Exception e) {
-            System.out.println("Something went wrong when setting player name!");
-        }
+            // Name Validation
+            String newName = "Curious " + name;
+            for (Player p : playerList) {
+                if (p.getName().equalsIgnoreCase(newName)) {
+                    System.out.println("There is another " + name +"! Choose another nickname please!");
+                    return;
+                }
+            }
+            Player newPlayer = new Player(newName);
+            playerList.add(newPlayer);
+            System.out.println("Hello " + newPlayer.getName() + "!");
     }
+    
+                    
+                
+    
 
 
     public Scanner getScanner() {
